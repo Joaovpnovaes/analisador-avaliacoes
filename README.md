@@ -75,20 +75,7 @@ python -m pytest -q
 ## Usar as suas próprias avaliações
 
 No painel, escolha **Enviar meu CSV**. O arquivo precisa das colunas `id` e `texto`. Com `restaurante` e `estrelas`, o painel também mostra os gráficos por restaurante e a comparação com as estrelas.
-
-## Publicar online (Streamlit Community Cloud)
-
-1. Suba o projeto para o GitHub. O `.env` fica de fora pelo `.gitignore`.
-2. Depois de rodar a análise uma vez, suba também o `dados/resultados.csv`. Assim quem abrir o link já vê o painel pronto, sem gastar a sua chave.
-3. Em <https://share.streamlit.io>, conecte o repositório e escolha `app.py`.
-4. Em **Settings → Secrets**, cole:
-
-```toml
-LLM_BASE_URL = "https://api.groq.com/openai/v1"
-LLM_API_KEY = "sua_chave"
-LLM_MODEL = "openai/gpt-oss-20b"
-```
-
+ 
 ## Limitações
 
 - As estrelas são uma referência imperfeita: há clientes que dão 4 estrelas reclamando, ou 2 estrelas por um único detalhe. Por isso, parte das discordâncias não é erro da IA.
